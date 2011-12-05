@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="lizhx.test">
+	<class
+		name="Person"
+		table="person"
+	>
+		<meta attribute="sync-DAO">true</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="ID"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="Name"
+			column="Name"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="Sex"
+			column="Sex"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="Address"
+			column="Address"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+
+
+	</class>	
+</hibernate-mapping>
